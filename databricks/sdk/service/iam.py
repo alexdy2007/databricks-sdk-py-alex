@@ -5,7 +5,7 @@ from __future__ import annotations
 import logging
 from dataclasses import dataclass
 from enum import Enum
-from typing import Any, Dict, Iterator, List, Optional
+from typing import Any, Dict, Iterator, List, Optional, Union
 
 from ._internal import _enum, _from_dict, _repeated_dict, _repeated_enum
 
@@ -19,7 +19,7 @@ class AccessControlRequest:
     group_name: Optional[str] = None
     """name of the group"""
 
-    permission_level: Optional[PermissionLevel] = None
+    permission_level: Optional[Union[PermissionLevel,JobPermissionLevel]] = None
     """Permission level"""
 
     service_principal_name: Optional[str] = None
