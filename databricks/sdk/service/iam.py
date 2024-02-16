@@ -740,6 +740,13 @@ class PermissionLevel(Enum):
     IS_OWNER = 'IS_OWNER'
 
 
+class JobPermissionLevel(Enum):
+    """Job Permission level, Subset of PermissionLevel"""
+    CAN_MANAGE = 'CAN_MANAGE'
+    CAN_MANAGE_RUN = 'CAN_MANAGE_RUN'
+    CAN_VIEW = 'CAN_VIEW'
+
+
 @dataclass
 class PermissionOutput:
     description: Optional[str] = None
